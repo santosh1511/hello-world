@@ -1,0 +1,17 @@
+{
+	"name": "SantoshIR",
+	"properties": {
+		"type": "Managed",
+		"description": "Azure Integration runtime",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "AutoResolve",
+				"dataFlowProperties": {
+					"computeType": "General",
+					"coreCount": 8,
+					"timeToLiveInMinutes": 60
+				}
+			}
+		}
+	}
+}
