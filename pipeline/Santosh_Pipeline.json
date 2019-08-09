@@ -1,0 +1,10 @@
+{
+	"name": "Santosh_Pipeline",
+	"properties": {
+		"description": "Very First to test",
+		"concurrency": 1,
+		"annotations": [
+			"SQL Azure to On Prmises"
+		]
+	}
+}
