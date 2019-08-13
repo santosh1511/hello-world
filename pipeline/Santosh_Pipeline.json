@@ -17,8 +17,102 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "AzureSqlSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"maxConcurrentConnections": 2
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ExtractLoadLogID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ExtractLoadLogID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "PackageName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PackageName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TableName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TableName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RowCount",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "RowCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "StartTime",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "StartTime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "EndTime",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "EndTime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Success",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "Success",
+									"type": "Boolean"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ExtractDataLoad",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ExtractDataLoad",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"concurrency": 1,
