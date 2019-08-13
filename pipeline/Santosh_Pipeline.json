@@ -116,6 +116,12 @@
 			}
 		],
 		"concurrency": 1,
+		"parameters": {
+			"ABC": {
+				"type": "string",
+				"defaultValue": "aaa"
+			}
+		},
 		"annotations": [
 			"SQL Azure to On Prmises"
 		]
